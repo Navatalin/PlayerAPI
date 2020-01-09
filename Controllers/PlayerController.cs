@@ -9,7 +9,7 @@ using PlayerAPI.Services;
 
 namespace PlayerAPI.Controllers
 {
-    [Route("api/v1/[controller]")]
+    [Route("startrucker/api/v1/[controller]")]
     [ApiController]
     public class PlayerController : ControllerBase
     {
