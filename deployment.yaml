@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: playerapi
+spec:
+  selector:
+    matchLabels:
+      app: playerapi
+  template:
+    metadata:
+      labels:
+        app: playerapi
+    spec:
+      containers:
+      - name: playerapi
+        image: navatalin/star-truckers-playerapi:latest
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 6001
